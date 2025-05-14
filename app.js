@@ -33,3 +33,4 @@ images.forEach((image, index) => {
   divImg.append(imgElement);
   div.appendChild(divImg);
 });
+

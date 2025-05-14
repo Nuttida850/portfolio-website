@@ -24,6 +24,8 @@
 }
 body {
   background: var(--background);
+  overflow-x: hidden;
+  min-width: 100%;
 }
 nav {
   padding: 40px 10%;
@@ -171,10 +173,6 @@ section {
         top: 30%;
         animation-delay: 0.8s;
       }
-      /* i {
-        font-size: 2rem;
-        color: var(--text-color);
-      } */
     }
   }
 }
@@ -367,13 +365,13 @@ section {
 .contact {
   height: 100vh;
   display: flex;
-
   .contact-con {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     .contact-left {
       h2 {
@@ -468,7 +466,7 @@ section {
         padding-top: 2rem;
         font-size: 1.2rem;
         color: var(--text-color);
-        
+
         &:focus {
           color: var(--text-color);
           font-size: 1.2rem;
@@ -501,6 +499,221 @@ section {
           box-shadow: 0 0 1rem var(--primary-color);
         }
       }
+    }
+    .element5 {
+      position: absolute;
+      bottom: -3rem;
+      right: 6rem;
+    }
+    .element6 {
+      position: absolute;
+      top: -8rem;
+      right: 30rem;
+    }
+  }
+}
+
+footer {
+  padding: 10rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  .menu {
+    display: flex;
+    list-style: none;
+    margin-bottom: 2rem;
+    gap: 5rem;
+    li {
+      a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: var(--text-color);
+        font-size: 1.2rem;
+        padding: 6px 15px;
+        border-radius: 50px;
+
+        &:hover{
+          box-shadow: 0 0 1rem var(--primary-color);
+          background: var(--primary-color);
+        }
+        img {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+  .socials {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    li {
+      a {
+        padding: 20px;
+        border-radius: 50%;
+        background: var(--secondary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        &:hover {
+          background: var(--primary-color);
+          box-shadow: 0 0 1rem var(--primary-color);
+          transform: translateY(-10px);
+        }
+      }
+    }
+  }
+  p {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 20px 5%;
+
+    .menu {
+      li {
+        margin-left: 0.5rem;
+
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  section {
+    padding: 5rem 5%;
+  }
+  .home {
+    height: auto;
+
+    .home-con {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      position: relative;
+
+      .home-left {
+        text-align: center;
+        h1 {
+          font-size: 3rem;
+        }
+        .buttons {
+          justify-content: center;
+        }
+      }
+      .arrow-down {
+        position: absolute;
+        left: unset;
+        right: 5%;
+        bottom: 0;
+      }
+    }
+  }
+  .about {
+    height: auto;
+
+    .about-con {
+      grid-template-columns: auto;
+      position: relative;
+      gap: 2rem;
+
+      .about-left {
+        text-align: center;
+        p {
+          margin: 0 auto;
+        }
+      }
+      .element2 {
+        position: absolute;
+        top: -10rem;
+        left: 10rem;
+      }
+      .element3 {
+        position: absolute;
+        top: -2rem;
+        left: 30rem;
+      }
+      .element4 {
+        display: none;
+      }
+    }
+  }
+  .works {
+    height: auto;
+    text-align: center;
+    h2::before {
+      height: 80px;
+    }
+    h2:hover::before {
+      width: 485px;
+    }
+    .listWork {
+      flex-wrap: wrap;
+      justify-content: center;
+      li {
+        white-space: nowrap;
+        margin-right: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .img-works {
+      justify-content: center;
+    }
+  }
+  .contact {
+    height: auto;
+
+    .contact-con {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      .contact-left {
+        text-align: center;
+
+        h2::before {
+          height: 150px;
+        }
+        h2:hover::before {
+          width: 455px;
+        }
+      }
+      .contact-right {
+        .input-box {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+        .btn {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      .element5 {
+        bottom: -5rem;
+        right: 2rem;
+      }
+      .element6 {
+        bottom: -5rem;
+        left: 2rem;
+      }
+    }
+  }
+  footer {
+    padding: 5rem 0;
+    .menu {
+      gap: 1rem;
+    }
+    .socials {
+      gap: 1rem;
     }
   }
 }
