@@ -12,6 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
     <header>
@@ -39,9 +40,9 @@
         <div class="home-right">
           <img src="images/hero.png" alt="" />
         </div>
-        <div class="arrow-down">
-          <i class="fa-solid fa-arrow-down"></i>
-        </div>
+        <a href="#about" class="arrow-down">
+          <!-- <i class="fa-solid fa-arrow-down"></i> -->
+        </a>
       </div>
     </section>
     <section class="about" id="about">
@@ -58,12 +59,46 @@
           </p>
         </div>
         <div class="about-right">
-            <img src="images/about.png" alt="">
+          <img src="images/about.png" alt="" />
         </div>
-        <img src="images/elements/element2.png" alt="" class="element2">
-        <img src="images/elements/element3.png" alt="" class="element3">
-        <img src="images/elements/element4.png" alt="" class="element4">
+        <img src="images/elements/element2.png" alt="" class="element2" />
+        <img src="images/elements/element3.png" alt="" class="element3" />
+        <img src="images/elements/element4.png" alt="" class="element4" />
       </div>
     </section>
+    <section class="works">
+      <h2>My Recent <span>Work</span></h2>
+      <ul class="listWork" id="listWork"></ul>
+      <div class="img-works" id="img-works"></div>
+    </section>
+    <section class="contact">
+      <div class="contact-con">
+        <div class="contact-left">
+          <h2>Got a Project in <span>mind?</span></h2>
+          <img src="images/contact.png" alt="" />
+        </div>
+        <div class="contact-right">
+          <form action="">
+            <div class="input-box">
+              <div class="input-text">
+                <label for="">Your name</label>
+                <input type="text" name="name" placeholder="Name" />
+              </div>
+              <div class="input-text">
+                <label for="">Your Email</label>
+                <input type="email" name="email" placeholder="Email" />
+              </div>
+            </div>
+            <div class="input-text">
+              <label for="">Your Message</label>
+              <textarea name="" id="" placeholder="Message"></textarea>
+            </div>
+            <button class="btn">Send Message<img src="images/send.png" alt=""></button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
   </body>
+  <script src="app.js"></script>
 </html>
